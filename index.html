@@ -19,8 +19,7 @@
                 fill="black" />
         </symbol>
         <symbol id="arrow-white" viewBox="0 0 23 23" fill="none">
-            <path
-                d="M11.5 0L9.47313 2.02687L17.4944 10.0625H0V12.9375H17.4944L9.47313 20.9731L11.5 23L23 11.5L11.5 0Z"
+            <path d="M11.5 0L9.47313 2.02687L17.4944 10.0625H0V12.9375H17.4944L9.47313 20.9731L11.5 23L23 11.5L11.5 0Z"
                 fill="white" />
         </symbol>
         <symbol id="contract-icon" viewBox="0 0 20 26" fill="none">
@@ -84,10 +83,8 @@
                 fill="black" />
             <path d="M6.28613 23.5H0V20.5H6.28613V23.5Z" fill="black" />
             <path d="M44.001 23.5H37.7148V20.5H44.001V23.5Z" fill="black" />
-            <path
-                d="M11.9502 9.82812L9.8291 11.9492L5.38379 7.50391L7.50488 5.38281L11.9502 9.82812Z" fill="black" />
-            <path
-                d="M38.6162 7.50391L34.1709 11.9492L32.0498 9.82812L36.4951 5.38281L38.6162 7.50391Z" fill="black" />
+            <path d="M11.9502 9.82812L9.8291 11.9492L5.38379 7.50391L7.50488 5.38281L11.9502 9.82812Z" fill="black" />
+            <path d="M38.6162 7.50391L34.1709 11.9492L32.0498 9.82812L36.4951 5.38281L38.6162 7.50391Z" fill="black" />
             <path d="M23.5 6.28613H20.5V0H23.5V6.28613Z" fill="black" />
         </symbol>
         <symbol id="lern-icon" viewBox="0 0 30 25" fill="none">
@@ -179,15 +176,20 @@
                         your next adventure?</p>
                     <form class="hero__form" action="#" method="post">
                         <label for="hero-search" class="visually-hidden">Search jobs by title or keyword</label>
-                        <input type="search" id="hero-search" class="hero__input-search" placeholder="Job Title or Keyword">
-                        <select class="hero__select" aria-label="City or State">
-                            <option selected disabled>City or State</option>
-                            <option>New York</option>
-                            <option>Los Angeles</option>
-                            <option>Chicago</option>
-                            <option>Houston</option>
-                        </select>
-                        <button class="hero__btn" type="submit">Search</button>
+                        <div class="hero__form-controls">
+                            <div class="hero__input-group">
+                                <input type="search" id="hero-search" class="hero__input-search"
+                                    placeholder="Job Title or Keyword">
+                                <select class="hero__select" aria-label="City or State">
+                                    <option selected disabled>City or State</option>
+                                    <option>New York</option>
+                                    <option>Los Angeles</option>
+                                    <option>Chicago</option>
+                                    <option>Houston</option>
+                                </select>
+                            </div>
+                            <button class="hero__btn" type="submit">Search</button>
+                        </div>
                         <div class="hero__chips">
                             <p class="hero__chips-title">Most Searched Jobs:</p>
                             <div class="hero__chips-container">
@@ -255,25 +257,25 @@
         </section>
         <section class="steps">
             <div class="container">
-                <h2 class="steps__title">Only 3 Steps to Get Your Dream Job!</h2>
+                <h2 class="steps__title">Only3 Steps to Get Your Dream Job!</h2>
                 <ol class="steps__list">
                     <li class="steps__item">
-                        <svg class="steps__icon" viewBox="0 0 42 42">
+                        <svg class="steps__icon" viewBox="004242">
                             <use href="#user-white"></use>
                         </svg>
-                        <p class="steps__desc">Create a professional profile and upload your resume.</p>
+                        <p class="steps__desc">Register for an account</p>
                     </li>
                     <li class="steps__item">
-                        <svg class="steps__icon" viewBox="0 0 33 42">
+                        <svg class="steps__icon" viewBox="003342">
                             <use href="#contract-white"></use>
                         </svg>
-                        <p class="steps__desc">Browse through thousands of job listings and find your perfect match.</p>
+                        <p class="steps__desc">Upload Your CV</p>
                     </li>
                     <li class="steps__item">
-                        <svg class="steps__icon" viewBox="0 0 42 42">
+                        <svg class="steps__icon" viewBox="004242">
                             <use href="#message-white"></use>
                         </svg>
-                        <p class="steps__desc">Submit your application and track your progress in real-time.</p>
+                        <p class="steps__desc">Apply For Dream Job!</p>
                     </li>
                 </ol>
             </div>
@@ -344,18 +346,20 @@
                         </ul>
                     </div>
                 </div>
-                <button type="button" class="categories__slider-btn categories__slider-btn_prev"
-                    aria-label="Previous category">
-                    <svg class="categories__slider-icon" viewBox="0 0 32 32">
-                        <use href="#arrow"></use>
-                    </svg>
-                </button>
-                <button type="button" class="categories__slider-btn categories__slider-btn_next"
-                    aria-label="Next category">
-                    <svg class="categories__slider-icon" viewBox="0 0 32 32">
-                        <use href="#arrow"></use>
-                    </svg>
-                </button>
+                <div class="categories__slider-buttons">
+                    <button type="button" class="categories__slider-btn categories__slider-btn_prev"
+                        aria-label="Previous category">
+                        <svg class="categories__slider-icon" viewBox="003232">
+                            <use href="#arrow"></use>
+                        </svg>
+                    </button>
+                    <button type="button" class="categories__slider-btn categories__slider-btn_next"
+                        aria-label="Next category">
+                        <svg class="categories__slider-icon" viewBox="003232">
+                            <use href="#arrow"></use>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </section>
         <section class="jobs">
@@ -657,7 +661,10 @@
                 <div class="testimonials__content">
                     <div class="testimonials__feedback">
                         <h3 class="testimonials__feedback-title">What our clients are saying</h3>
-                        <p class="testimonials__feedback-text">"I had the privilege of using Job Hunt to search for employment, and it exceeded my expectations. The platform's user-friendly features and the vast array of job listings made my job search a success. I endorse Job Hunt wholeheartedly."</p>
+                        <p class="testimonials__feedback-text">"I had the privilege of using Job Hunt to search for
+                            employment, and it exceeded my expectations. The platform's user-friendly features and the
+                            vast array of job listings made my job search a success. I endorse Job Hunt wholeheartedly."
+                        </p>
                         <div class="testimonials__author">
                             <span class="testimonials__author-name">Emmanuel Rice</span>
                             <span class="testimonials__author-position">Product Manager</span>
@@ -733,8 +740,10 @@
             <div class="container">
                 <form class="notification__form">
                     <h2 class="notification__title">Want to get notified on every Job Posting?</h2>
-                    <input type="email" class="notification__input" placeholder="Enter Your Email Address">
-                    <button type="submit" class="notification__btn">Subscribe</button>
+                    <div class="notification__field">
+                        <input type="email" class="notification__input" placeholder="Enter Your Email Address">
+                        <button type="submit" class="notification__btn">Subscribe</button>
+                    </div>
                 </form>
             </div>
         </section>

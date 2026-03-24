@@ -1,0 +1,149 @@
+﻿.offer {
+  padding-top: 70px;
+  background-color: var(--color-accent);
+
+  .container {
+    display: grid;
+    grid-template-columns: minmax(0, 615px) minmax(0, 556px);
+    justify-content: center;
+    align-items: center;
+    column-gap: 152px;
+  }
+
+  &__img {
+    align-self: end;
+    min-height: 626px;
+    margin-top: 175px;
+    background-image: image-set(
+      '../assets/images/offer-img_2.avif' type('image/avif'),
+      '../assets/images/offer-img_2.webp' type('image/webp'),
+      '../assets/images/offer-img_2.png' type('image/png')
+    );
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+  }
+
+  &__map {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 16px;
+    margin-top: 67px;
+  }
+
+  &__title,
+  &__subtitle {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1a1a1a;
+  }
+
+  &__desc {
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #6b6b6b;
+  }
+
+  &__items {
+    display: grid;
+    gap: 37px;
+
+    /* Настройки SVG-линий */
+    --line-1-w: 144px;
+    --line-1-h: 168px;
+    --line-2-w: 142px;
+    --line-2-h: 158px;
+  }
+
+  &__item {
+    max-width: 412px;
+    padding: 16px 16px 16px 60px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      width: 28px;
+      height: 28px;
+      background-color: #000;
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      mask-position: center;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+      -webkit-mask-position: center;
+    }
+
+    &:nth-child(1) {
+      background-color: var(--color-secondary);
+      &::before {
+        mask-image: url('../assets/svg/contract-icon.svg');
+        -webkit-mask-image: url('../assets/svg/contract-icon.svg');
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: var(--color-primary);
+      margin-left: auto;
+      margin-right: 29px;
+      &::before {
+        mask-image: url('../assets/svg/lern-icon.svg');
+        -webkit-mask-image: url('../assets/svg/lern-icon.svg');
+      }
+    }
+
+    &:nth-child(3) {
+      background-color: var(--color-secondary);
+      &::before {
+        mask-image: url('../assets/svg/contract-icon.svg');
+        -webkit-mask-image: url('../assets/svg/contract-icon.svg');
+      }
+    }
+
+    &::after {
+      content: none;
+    }
+
+    /* Линия от 1-й к 2-й карточке */
+    &:first-child::after {
+      content: '';
+      position: absolute;
+      top: 46px;
+      left: 99%;
+      width: var(--line-1-w);
+      height: var(--line-1-h);
+      background: url('../assets/svg/line-1.svg') top left / contain no-repeat;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Линия от 2-й к 3-й карточке */
+    &:nth-child(2)::after {
+      content: '';
+      position: absolute;
+      top: 57px;
+      left: 71%;
+      width: var(--line-2-w);
+      height: var(--line-2-h);
+      background: url('../assets/svg/line-2.svg') top left / contain no-repeat;
+      pointer-events: none;
+      z-index: 2;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  &__item-desc {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #4d4d4d;
+  }
+}

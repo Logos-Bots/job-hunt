@@ -1,7 +1,106 @@
 @import '_normalize';
 @import '_fonts';
+@import '_header';
+@import '_hero';
+@import '_offer';
+@import '_steps';
+@import '_categories';
+@import '_jobs';
+@import '_testimonials';
+@import '_trusted';
+@import '_notification';
+@import '_footer';
 
-// Другие импорты стилей
+// Общие стили
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #20c6b1;
+  --color-secondary: #ebf0f3;
+  --color-light: #fffff2;
+  --color-accent: #f2fffd;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: 'Nunito-Regular', sans-serif;
+  font-size: 18px;
+}
+
+// Сброс стилей заголовков
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+h1,
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+// Сброс стилей списков
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// Сброс стилей параграфов
+p {
+  margin: 0;
+  padding: 0;
+}
+
+// Сброс стилей кнопок
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+// Сброс стилей ссылок
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header,
+.footer {
+  flex-shrink: 0;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  width: 1360px;
+  margin: 0 auto;
+}
 
 .visually-hidden {
   position: absolute;
