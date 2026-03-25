@@ -175,12 +175,13 @@
                     <p class="hero__desc">Here you can find your best job, Explore hundreds of jobs with us. Ready for
                         your next adventure?</p>
                     <form class="hero__form" action="#" method="post">
-                        <label for="hero-search" class="visually-hidden">Search jobs by title or keyword</label>
                         <div class="hero__form-controls">
                             <div class="hero__input-group">
+                                <label for="hero-search" class="visually-hidden">Search jobs by title or keyword</label>
                                 <input type="search" id="hero-search" class="hero__input-search"
                                     placeholder="Job Title or Keyword">
-                                <select class="hero__select" aria-label="City or State">
+                                <label for="hero-location" class="visually-hidden">City or State</label>
+                                <select id="hero-location" class="hero__select">
                                     <option selected disabled>City or State</option>
                                     <option>New York</option>
                                     <option>Los Angeles</option>
@@ -400,9 +401,9 @@
                                 <li class="job-card__tag">Full Time</li>
                                 <li class="job-card__tag">Remote</li>
                             </ul>
-                            <div class="job-card__desc">Dribbble is seeking for the services of a professionalContent
+                            <p class="job-card__desc">Dribbble is seeking for the services of a professionalContent
                                 Manager who has 5 Years working experiencein this field. He/She will be working closely
-                                with............</div>
+                                with............</p>
                             <div class="job-card__actions">
                                 <button type="button" class="job-card__btn">Apply</button>
                                 <button type="button" class="job-card__btn">Read More</button>
@@ -442,9 +443,9 @@
                                 <li class="job-card__tag">Remote</li>
                                 <li class="job-card__tag">Part Time</li>
                             </ul>
-                            <div class="job-card__desc">Dribbble is seeking for the services of a professionalContent
+                            <p class="job-card__desc">Dribbble is seeking for the services of a professionalContent
                                 Manager who has 5 Years working experiencein this field. He/She will be working closely
-                                with............</div>
+                                with............</p>
                             <div class="job-card__actions">
                                 <button type="button" class="job-card__btn">Apply</button>
                                 <button type="button" class="job-card__btn">Read More</button>
@@ -488,9 +489,9 @@
                                 <li class="job-card__tag">On Site</li>
                                 <li class="job-card__tag">Full Time</li>
                             </ul>
-                            <div class="job-card__desc">Dribbble is seeking for the services of a professionalContent
+                            <p class="job-card__desc">Dribbble is seeking for the services of a professionalContent
                                 Manager who has 5 Years working experiencein this field. He/She will be working closely
-                                with............</div>
+                                with............</p>
                             <div class="job-card__actions">
                                 <button type="button" class="job-card__btn">Apply</button>
                                 <button type="button" class="job-card__btn">Read More</button>
@@ -545,9 +546,9 @@
                                 <li class="job-card__tag">Part Time</li>
                                 <li class="job-card__tag">On Site</li>
                             </ul>
-                            <div class="job-card__desc">Dribbble is seeking for the services of a professionalContent
+                            <p class="job-card__desc">Dribbble is seeking for the services of a professionalContent
                                 Manager who has 5 Years working experiencein this field. He/She will be working closely
-                                with............</div>
+                                with............</p>
                             <div class="job-card__actions">
                                 <button type="button" class="job-card__btn">Apply</button>
                                 <button type="button" class="job-card__btn">Read More</button>
@@ -587,9 +588,9 @@
                                 <li class="job-card__tag">Remote</li>
                                 <li class="job-card__tag">Full Time</li>
                             </ul>
-                            <div class="job-card__desc">Dribbble is seeking for the services of a professionalContent
+                            <p class="job-card__desc">Dribbble is seeking for the services of a professionalContent
                                 Manager who has 5 Years working experiencein this field. He/She will be working closely
-                                with............</div>
+                                with............</p>
                             <div class="job-card__actions">
                                 <button type="button" class="job-card__btn">Apply</button>
                                 <button type="button" class="job-card__btn">Read More</button>
@@ -642,9 +643,9 @@
                                 <li class="job-card__tag">Full Time</li>
                                 <li class="job-card__tag">Part Time</li>
                             </ul>
-                            <div class="job-card__desc">Dribbble is seeking for the services of a professionalContent
+                            <p class="job-card__desc">Dribbble is seeking for the services of a professionalContent
                                 Manager who has 5 Years working experiencein this field. He/She will be working closely
-                                with............</div>
+                                with............</p>
                             <div class="job-card__actions">
                                 <button type="button" class="job-card__btn">Apply</button>
                                 <button type="button" class="job-card__btn">Read More</button>
@@ -741,7 +742,9 @@
                 <form class="notification__form">
                     <h2 class="notification__title">Want to get notified on every Job Posting?</h2>
                     <div class="notification__field">
-                        <input type="email" class="notification__input" placeholder="Enter Your Email Address">
+                        <label for="notification-email" class="visually-hidden">Email address</label>
+                        <input type="email" id="notification-email" class="notification__input"
+                            placeholder="Enter Your Email Address">
                         <button type="submit" class="notification__btn">Subscribe</button>
                     </div>
                 </form>
@@ -757,7 +760,7 @@
                     <div class="footer__social">
                         <ul class="footer__social-list">
                             <li class="footer__social-item">
-                                <a href="#" class="footer__social-link">
+                                <a href="#" class="footer__social-link" aria-label="Facebook">
                                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -767,7 +770,7 @@
                                 </a>
                             </li>
                             <li class="footer__social-item">
-                                <a href="#" class="footer__social-link">
+                                <a href="#" class="footer__social-link" aria-label="Twitter">
                                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -780,7 +783,7 @@
                                 </a>
                             </li>
                             <li class="footer__social-item">
-                                <a href="#" class="footer__social-link">
+                                <a href="#" class="footer__social-link" aria-label="LinkedIn">
                                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -797,7 +800,7 @@
                                 </a>
                             </li>
                             <li class="footer__social-item">
-                                <a href="#" class="footer__social-link">
+                                <a href="#" class="footer__social-link" aria-label="Instagram">
                                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
