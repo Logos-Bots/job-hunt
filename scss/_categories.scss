@@ -13,11 +13,14 @@
     line-height: 1.5;
   }
 
+  &__slider-container {
+    margin-bottom: 56px;
+  }
+
   &__items {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 32px;
-    margin-bottom: 56px;
   }
 
   &__item {

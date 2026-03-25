@@ -21,14 +21,12 @@
   }
 
   &__btn {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 12px;
     margin: 0 auto;
-    padding: 16px 104px 16px 49px;
+    padding: 16px 49px;
     background-color: var(--color-primary);
-    background-image: url('../assets/svg/arrow-white.svg');
-    background-repeat: no-repeat;
-    background-position: right 49px center;
-    background-size: 20px;
     color: #fff;
     border-radius: 2px;
     font-weight: 700;
@@ -49,6 +47,12 @@
       transform: scale(0.98);
     }
   }
+
+  &__btn-icon {
+    width: 20px;
+    height: 20px;
+    color: currentColor;
+  }
 }
 
 .job-card {
@@ -59,6 +63,48 @@
   border: 1px solid #000;
   border-radius: 10px;
   height: 100%;
+  position: relative;
+
+  &__favorite {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 36px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 5px;
+      border-radius: 8px;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  &__favorite-icon {
+    width: 28px;
+    height: 36px;
+    color: #000;
+    transition: color 0.2s;
+  }
+
+  &__favorite:hover &__favorite-icon {
+    color: #FFD700;
+  }
 
   &__header {
     display: flex;

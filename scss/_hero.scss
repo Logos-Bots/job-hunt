@@ -83,16 +83,14 @@
     color: #333;
     background-color: #fff;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 4'%3E%3Cpath d='M0 0L4 4L8 0H0Z' fill='%23000'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
     background-position: right 8px center;
-    background-size: 8px 4px;
     border: none;
     border-radius: 0;
     outline: none;
     cursor: pointer;
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
+    @extend %select-chevron;
   }
 
   &__btn {

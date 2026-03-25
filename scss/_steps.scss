@@ -1,6 +1,18 @@
+// Animation variables
+$steps-animation-duration: 0.3s;
+$steps-animation-timing: ease;
+$steps-animation-delay: 0.1s;
+
 .steps {
   padding-top: 70px;
   padding-bottom: 70px;
+
+  // CSS custom properties for animations (overridable)
+  --steps-animation-duration: #{$steps-animation-duration};
+  --steps-animation-timing: #{$steps-animation-timing};
+  --steps-animation-delay: #{$steps-animation-delay};
+  --steps-hover-scale: 1.02;
+  --steps-hover-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 
   &__title {
     margin-bottom: 56px;
@@ -13,22 +25,28 @@
     max-width: 1012px;
     gap: 56px;
     margin: 0 auto;
+    padding: 0;
+    list-style: none;
     counter-reset: step-counter;
   }
 
- &__item {
- position: relative;
- flex:1;
- display: flex;
- flex-direction: column;
- align-items: center;
- gap:24px;
- padding:32px;
- background-color: var(--color-primary);
- color: #fff;
- text-align: center;
- border-radius:10px;
+  &__item {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 32px;
+    background-color: var(--color-primary);
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    transition:
+      transform var(--steps-animation-duration) var(--steps-animation-timing),
+      box-shadow var(--steps-animation-duration) var(--steps-animation-timing);
 
+    // Number counter
     &::before {
       content: counter(step-counter);
       counter-increment: step-counter;
@@ -40,6 +58,32 @@
       line-height: 1;
       color: #fff;
     }
+
+    // Hover state
+    &:hover,
+    &:focus-visible {
+      transform: scale(var(--steps-hover-scale, 1.02));
+      box-shadow: var(--steps-hover-shadow, 0 8px 24px rgba(0, 0, 0, 0.15));
+      cursor: pointer;
+    }
+
+    // Focus state for accessibility
+    &:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+
+    // Animation preparation class
+    &_animation {
+      opacity: 0;
+      animation: steps-fade-in var(--steps-animation-duration) var(--steps-animation-timing) forwards;
+
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          animation-delay: calc(var(--steps-animation-delay, #{$steps-animation-delay}) * #{$i});
+        }
+      }
+    }
   }
 
   &__icon {
@@ -48,10 +92,29 @@
     color: #fff;
     fill: currentColor;
     flex-shrink: 0;
+    transition: transform var(--steps-animation-duration) var(--steps-animation-timing);
+
+    .steps__item:hover &,
+    .steps__item:focus-visible & {
+      transform: scale(1.1);
+    }
   }
 
   &__desc {
     color: #fff;
     line-height: 1.5;
+    margin: 0;
+  }
+}
+
+// Keyframes for animation
+@keyframes steps-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

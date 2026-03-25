@@ -8,20 +8,15 @@
     justify-content: center;
     align-items: center;
     column-gap: 152px;
-  }
-
-  &__img {
-    align-self: end;
-    min-height: 626px;
-    margin-top: 175px;
+    min-height: 871px;
     background-image: image-set(
       '../assets/images/offer-img_2.avif' type('image/avif'),
       '../assets/images/offer-img_2.webp' type('image/webp'),
       '../assets/images/offer-img_2.png' type('image/png')
     );
     background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
+    background-position: left bottom;
+    background-size: 615px 626px;
   }
 
   &__map {
@@ -29,6 +24,7 @@
     grid-template-rows: auto auto auto auto;
     row-gap: 16px;
     margin-top: 67px;
+    grid-column: 2;
   }
 
   &__title,
@@ -58,50 +54,25 @@
   }
 
   &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
     max-width: 412px;
-    padding: 16px 16px 16px 60px;
+    padding: 16px;
     position: relative;
-
-    &::before {
-      content: '';
-      position: absolute;
-      left: 16px;
-      top: 16px;
-      width: 28px;
-      height: 28px;
-      background-color: #000;
-      mask-repeat: no-repeat;
-      mask-size: contain;
-      mask-position: center;
-      -webkit-mask-repeat: no-repeat;
-      -webkit-mask-size: contain;
-      -webkit-mask-position: center;
-    }
 
     &:nth-child(1) {
       background-color: var(--color-secondary);
-      &::before {
-        mask-image: url('../assets/svg/contract-icon.svg');
-        -webkit-mask-image: url('../assets/svg/contract-icon.svg');
-      }
     }
 
     &:nth-child(2) {
       background-color: var(--color-primary);
       margin-left: auto;
       margin-right: 29px;
-      &::before {
-        mask-image: url('../assets/svg/lern-icon.svg');
-        -webkit-mask-image: url('../assets/svg/lern-icon.svg');
-      }
     }
 
     &:nth-child(3) {
       background-color: var(--color-secondary);
-      &::before {
-        mask-image: url('../assets/svg/contract-icon.svg');
-        -webkit-mask-image: url('../assets/svg/contract-icon.svg');
-      }
     }
 
     &::after {
@@ -133,6 +104,16 @@
       pointer-events: none;
       z-index: 2;
     }
+  }
+
+  &__item-icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+  }
+
+  &__item-text {
+    flex: 1;
   }
 
   &__item-title {
