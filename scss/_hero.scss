@@ -4,14 +4,17 @@
 
   &__container {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    align-items: center;
-    gap: 152px;
+    grid-template-columns: minmax(0, 482px) minmax(0, 720px);
+    justify-content: space-between;
+    align-items: end;
+    gap: clamp(2rem, 5vw, 152px);
   }
 
   &__search {
+    width: 100%;
     max-width: 482px;
-    margin-top: 92px;
+    margin-top: clamp(40px, 8vw, 92px);
+    padding-bottom: 92px;
   }
 
   &__title {
@@ -80,17 +83,28 @@
     padding: 8px;
     padding-right: 24px;
     font-size: 14px;
-    color: #333;
-    background-color: #fff;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 4'%3E%3Cpath d='M0 0L4 4L8 0H0Z' fill='%23000'/%3E%3C/svg%3E");
     background-position: right 8px center;
     border: none;
-    border-radius: 0;
     outline: none;
     cursor: pointer;
     -webkit-appearance: none;
     -moz-appearance: none;
+    appearance: none;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      box-shadow 0.2s;
     @extend %select-chevron;
+
+    &:hover {
+      background-color: var(--color-secondary);
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.3);
+    }
   }
 
   &__btn {
@@ -157,8 +171,9 @@
     grid-template-rows: repeat(2, auto);
     align-items: end;
     gap: 1rem;
+    width: 100%;
     max-width: 720px;
-    min-height: 568px;
+    aspect-ratio: 720 / 568;
     background-image: image-set(
       '../assets/images/offer-img_1.avif' type('image/avif'),
       '../assets/images/offer-img_1.webp' type('image/webp'),
@@ -185,19 +200,19 @@
   &__vacancy {
     justify-self: start;
     align-self: start;
-    width: 250px;
-    height: 152px;
-    margin-left: 62px;
-    margin-top: 70px;
+    width: 71%;
+    aspect-ratio: 250 / 152;
+    margin-left: 18%;
+    margin-top: 19%;
     z-index: 1;
   }
 
   &__summary {
     justify-self: end;
     align-self: start;
-    width: 211px;
-    height: 110px;
-    margin-top: 28px;
+    width: 60%;
+    aspect-ratio: 211 / 110;
+    margin-top: 7%;
     margin-right: 0;
     z-index: 2;
   }
@@ -205,20 +220,20 @@
   &__offer {
     justify-self: start;
     align-self: end;
-    width: 235px;
-    height: 70px;
-    margin-left: 86px;
-    margin-bottom: 34px;
+    width: 67%;
+    aspect-ratio: 235 / 70;
+    margin-left: 24%;
+    margin-bottom: 10%;
     z-index: 3;
   }
 
   &__users {
     justify-self: end;
     align-self: end;
-    width: 191px;
-    height: 135px;
-    margin-right: 18px;
-    margin-bottom: 37px;
+    width: 55%;
+    aspect-ratio: 191 / 135;
+    margin-right: 4%;
+    margin-bottom: 11%;
     z-index: 4;
   }
 }
