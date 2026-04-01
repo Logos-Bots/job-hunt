@@ -255,8 +255,6 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding-top: 40px;
-
     &__container {
       gap: 32px;
     }
@@ -367,3 +365,114 @@
   }
 }
 
+// =============================================================================
+// Offer - Адаптивные стили
+// =============================================================================
+
+@media (max-width: 1399px) {
+  .offer {
+    padding-top: 35px;
+
+    &__container {
+      grid-template-columns: 1fr minmax(0, 556px);
+      column-gap: clamp(40px, 5vw, 80px);
+    }
+
+    &__preview {
+      width: 100%;
+      min-height: 733px;
+    }
+
+    &__map {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .offer {
+    &__container {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__map {
+      grid-column: auto;
+    }
+
+    &__items {
+      padding-left: 0;
+      gap: 24px;
+    }
+
+    &__item {
+      position: relative;
+      width: 100%;
+      max-width: none;
+
+      &:nth-child(2) {
+        margin-left: 0;
+      }
+
+      &:first-child::after {
+        content: none;
+      }
+
+      &:nth-child(3)::after {
+        content: none;
+      }
+
+      // Новые вертикальные линии между карточками
+      &:not(:last-child)::before {
+        content: '';
+        position: absolute;
+        bottom: -24px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3px;
+        height: 24px;
+        background-color: var(--color-primary);
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .offer {
+    &__container {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+
+    &__preview {
+      display: none;
+    }
+
+    &__map {
+      grid-column: auto;
+      width: 100%;
+      justify-items: center;
+      text-align: center;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__subtitle {
+      text-align: center;
+    }
+
+    &__desc {
+      text-align: center;
+    }
+
+    &__items {
+      width: 100%;
+    }
+
+    &__item {
+      align-items: center;
+    }
+  }
+}

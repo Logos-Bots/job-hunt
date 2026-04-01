@@ -2,13 +2,16 @@
   padding-top: 70px;
   background-color: var(--color-accent);
 
-  .container {
+  &__container {
     display: grid;
     grid-template-columns: minmax(0, 615px) minmax(0, 556px);
-    justify-content: center;
-    align-items: center;
-    column-gap: 152px;
-    min-height: 871px;
+    justify-content: space-between;
+    align-items: end;
+    column-gap: clamp(60px, 8vw, 152px);
+  }
+
+  &__preview {
+    min-height: 801px;
     background-image: image-set(
       '../assets/images/offer-img_2.avif' type('image/avif'),
       '../assets/images/offer-img_2.webp' type('image/webp'),
@@ -16,15 +19,15 @@
     );
     background-repeat: no-repeat;
     background-position: left bottom;
-    background-size: 615px 626px;
+    background-size: contain;
   }
 
   &__map {
     display: grid;
     grid-template-rows: auto auto auto auto;
     row-gap: 16px;
-    margin-top: 67px;
     grid-column: 2;
+    padding-bottom: 67px;
   }
 
   &__title,
@@ -43,14 +46,16 @@
   }
 
   &__items {
+    position: relative;
     display: grid;
     gap: 37px;
+    padding-left: 6%;
 
     /* Настройки SVG-линий */
     --line-1-w: 144px;
-    --line-1-h: 168px;
+    --line-1-h: 160px;
     --line-2-w: 142px;
-    --line-2-h: 158px;
+    --line-2-h: 150px;
   }
 
   &__item {
@@ -67,8 +72,8 @@
 
     &:nth-child(2) {
       background-color: var(--color-primary);
-      margin-left: auto;
-      margin-right: 29px;
+      margin-left: 28%;
+      z-index: 2;
     }
 
     &:nth-child(3) {
@@ -89,20 +94,20 @@
       height: var(--line-1-h);
       background: url('../assets/svg/line-1.svg') top left / contain no-repeat;
       pointer-events: none;
-      z-index: 2;
+      z-index: 1;
     }
 
     /* Линия от 2-й к 3-й карточке */
-    &:nth-child(2)::after {
+    &:nth-child(3)::after {
       content: '';
       position: absolute;
-      top: 57px;
-      left: 71%;
+      bottom: 57px;
+      left: 99%;
       width: var(--line-2-w);
       height: var(--line-2-h);
       background: url('../assets/svg/line-2.svg') top left / contain no-repeat;
       pointer-events: none;
-      z-index: 2;
+      z-index: 1;
     }
   }
 
