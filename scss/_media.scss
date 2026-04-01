@@ -476,3 +476,136 @@
     }
   }
 }
+
+// =============================================================================
+// Steps - Адаптивные стили
+// =============================================================================
+
+@media (max-width: 1200px) {
+  .steps {
+    &__list {
+      gap: 32px;
+    }
+
+    &__item {
+      padding: 24px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .steps {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &__title {
+      margin-bottom: 40px;
+      font-size: 28px;
+    }
+
+    &__list {
+      gap: 24px;
+      max-width: 800px;
+    }
+
+    &__item {
+      padding: 20px;
+      gap: 16px;
+
+      &::before {
+        top: 12px;
+        left: 20px;
+        font-size: 18px;
+      }
+    }
+
+    &__icon {
+      width: 36px;
+      height: 36px;
+    }
+
+    &__desc {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .steps {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &__title {
+      margin-bottom: 32px;
+      font-size: 24px;
+    }
+
+    &__list {
+      flex-direction: column;
+      gap: 20px;
+      max-width: 400px;
+    }
+
+    &__item {
+      padding: 24px 20px;
+      gap: 16px;
+
+      &::before {
+        top: 12px;
+        left: 24px;
+        font-size: 16px;
+      }
+
+      // Убираем анимацию на мобильных для лучшей производительности
+      &_animation {
+        opacity: 1;
+        animation: none;
+      }
+    }
+
+    &__icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    &__desc {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .steps {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    &__title {
+      margin-bottom: 24px;
+      font-size: 20px;
+    }
+
+    &__list {
+      gap: 16px;
+    }
+
+    &__item {
+      padding: 20px 16px;
+      gap: 12px;
+
+      &::before {
+        top: 10px;
+        left: 16px;
+        font-size: 14px;
+      }
+    }
+
+    &__icon {
+      width: 28px;
+      height: 28px;
+    }
+
+    &__desc {
+      font-size: 13px;
+    }
+  }
+}
