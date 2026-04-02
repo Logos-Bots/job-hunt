@@ -892,3 +892,146 @@
     }
   }
 }
+
+// =============================================================================
+// Testimonials - Адаптивные стили
+// =============================================================================
+
+@media (max-width: 992px) {
+  .testimonials {
+    &__content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(24px, 5vw, 48px);
+      justify-items: center;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    &__feedback {
+      order: 1;
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+
+      &-title {
+        font-size: 24px;
+      }
+
+      &-text {
+        font-size: 16px;
+      }
+    }
+
+    &__author {
+      align-items: center;
+    }
+
+    &__photo {
+      order: 0;
+      width: 100%;
+      max-width: 100%;
+
+      .reviews-photo {
+        margin: 0 auto;
+        margin-top: 0;
+        max-width: 80%;
+
+        &::before {
+          top: -20px;
+          right: -20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 50px 0;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__content {
+      gap: clamp(20px, 4vw, 36px);
+    }
+
+    &__feedback {
+      &-title {
+        font-size: 22px;
+        margin-bottom: 24px;
+      }
+
+      &-text {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 24px;
+      }
+    }
+
+    &__photo {
+      .reviews-photo {
+        max-width: 70%;
+
+        &::before {
+          top: -15px;
+          right: -15px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials {
+    padding: 40px 0;
+
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__content {
+      gap: clamp(16px, 4vw, 24px);
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
+    &__feedback {
+      &-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+
+      &-text {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__author {
+      gap: 8px;
+
+      &-name {
+        font-size: 16px;
+      }
+
+      &-position {
+        font-size: 13px;
+      }
+    }
+
+    &__photo {
+      .reviews-photo {
+        max-width: 60%;
+
+        &::before {
+          top: -12px;
+          right: -12px;
+        }
+      }
+    }
+  }
+}
