@@ -708,3 +708,187 @@
     }
   }
 }
+
+// =============================================================================
+// Jobs - Адаптивные стили
+// =============================================================================
+
+@media (max-width: 1200px) {
+  .jobs {
+    padding-bottom: 80px;
+
+    &__desc {
+      margin-bottom: 40px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    &__btn {
+      padding: 14px 40px;
+    }
+  }
+
+  .job-card {
+    padding: 24px;
+
+    &__favorite {
+      top: 20px;
+      right: 20px;
+    }
+
+    &__header {
+      margin-bottom: 1rem;
+    }
+
+    &__icon {
+      width: 56px;
+      height: 56px;
+    }
+
+    &__title {
+      margin-bottom: 0.75rem;
+    }
+
+    &__desc {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .jobs {
+    padding-bottom: 60px;
+
+    &__desc {
+      margin-bottom: 32px;
+    }
+
+    &__list {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    &__btn {
+      padding: 12px 32px;
+    }
+
+    &__btn-icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .job-card {
+    padding: 20px;
+
+    &__favorite {
+      top: 16px;
+      right: 16px;
+      width: 24px;
+      height: 30px;
+    }
+
+    &__favorite-icon {
+      width: 24px;
+      height: 30px;
+    }
+
+    &__header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    &__icon {
+      width: 48px;
+      height: 48px;
+    }
+
+    &__header-info {
+      gap: 2px;
+    }
+
+    &__title {
+      margin-bottom: 0.5rem;
+    }
+
+    &__tags {
+      margin-bottom: 12px;
+    }
+
+    &__tag {
+      padding: 0.3rem 0.6rem;
+    }
+
+    &__desc {
+      margin-bottom: 16px;
+    }
+
+    &__actions {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    &__btn {
+      padding: 10px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .jobs {
+    padding-bottom: 48px;
+
+    &__desc {
+      margin-bottom: 24px;
+    }
+
+    &__list {
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    &__btn {
+      padding: 12px 24px;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  .job-card {
+    padding: 16px;
+
+    &__favorite {
+      top: 12px;
+      right: 12px;
+    }
+
+    &__header {
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    &__icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    &__tag {
+      padding: 0.25rem 0.5rem;
+    }
+
+    &__desc {
+      margin-bottom: 12px;
+    }
+
+    &__btn {
+      padding: 8px;
+    }
+  }
+}
