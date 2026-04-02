@@ -480,6 +480,11 @@
 // =============================================================================
 // Steps - Адаптивные стили
 // =============================================================================
+@media (max-width: 1399px) {
+  .steps {
+    padding: 35px 0;
+  }
+}
 
 @media (max-width: 1200px) {
   .steps {
@@ -495,7 +500,6 @@
 
 @media (max-width: 992px) {
   .steps {
-    padding-top: 50px;
     padding-bottom: 50px;
 
     &__title {
@@ -527,7 +531,6 @@
 
 @media (max-width: 768px) {
   .steps {
-    padding-top: 40px;
     padding-bottom: 40px;
 
     &__title {
@@ -566,7 +569,6 @@
 
 @media (max-width: 480px) {
   .steps {
-    padding-top: 32px;
     padding-bottom: 32px;
 
     &__title {
@@ -598,11 +600,14 @@
 // =============================================================================
 // Categories - Адаптивные стили
 // =============================================================================
+@media (max-width: 1399px) {
+  .categories {
+    padding: 35px 0;
+  }
+}
 
 @media (max-width: 992px) {
   .categories {
-    padding-bottom: 50px;
-
     &__desc {
       margin-bottom: 40px;
     }
@@ -630,7 +635,6 @@
 
 @media (max-width: 768px) {
   .categories {
-    padding-top: 40px;
     padding-bottom: 40px;
 
     &__title {
@@ -683,7 +687,6 @@
 
 @media (max-width: 480px) {
   .categories {
-    padding-top: 32px;
     padding-bottom: 32px;
 
     &__desc {
@@ -712,11 +715,14 @@
 // =============================================================================
 // Jobs - Адаптивные стили
 // =============================================================================
+@media (max-width: 1399px) {
+  .jobs {
+    padding: 35px 0;
+  }
+}
 
 @media (max-width: 1200px) {
   .jobs {
-    padding-bottom: 80px;
-
     &__desc {
       margin-bottom: 40px;
     }
@@ -761,8 +767,6 @@
 
 @media (max-width: 768px) {
   .jobs {
-    padding-bottom: 60px;
-
     &__desc {
       margin-bottom: 32px;
     }
@@ -843,8 +847,6 @@
 
 @media (max-width: 480px) {
   .jobs {
-    padding-bottom: 48px;
-
     &__desc {
       margin-bottom: 24px;
     }
@@ -896,6 +898,11 @@
 // =============================================================================
 // Testimonials - Адаптивные стили
 // =============================================================================
+@media (max-width: 1399px) {
+  .testimonials {
+    padding: 35px 0;
+  }
+}
 
 @media (max-width: 992px) {
   .testimonials {
@@ -948,8 +955,6 @@
 
 @media (max-width: 768px) {
   .testimonials {
-    padding: 50px 0;
-
     &__title {
       margin-bottom: 40px;
     }
@@ -986,8 +991,6 @@
 
 @media (max-width: 480px) {
   .testimonials {
-    padding: 40px 0;
-
     &__title {
       margin-bottom: 32px;
     }
