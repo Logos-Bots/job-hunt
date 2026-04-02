@@ -113,4 +113,13 @@
       border-color: var(--color-primary);
     }
   }
+
+  &__copyright {
+    font-size: 14px;
+  }
+
+  &__language {
+    display: flex;
+    align-items: center;
+  }
 }
