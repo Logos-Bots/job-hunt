@@ -911,8 +911,7 @@
       grid-template-columns: 1fr;
       gap: clamp(24px, 5vw, 48px);
       justify-items: center;
-      padding-left: 16px;
-      padding-right: 16px;
+      padding: 0;
     }
 
     &__feedback {
@@ -920,14 +919,6 @@
       width: 100%;
       max-width: 100%;
       text-align: center;
-
-      &-title {
-        font-size: 24px;
-      }
-
-      &-text {
-        font-size: 16px;
-      }
     }
 
     &__author {
@@ -965,12 +956,10 @@
 
     &__feedback {
       &-title {
-        font-size: 22px;
         margin-bottom: 24px;
       }
 
       &-text {
-        font-size: 15px;
         line-height: 1.7;
         margin-bottom: 24px;
       }
@@ -997,18 +986,14 @@
 
     &__content {
       gap: clamp(16px, 4vw, 24px);
-      padding-left: 12px;
-      padding-right: 12px;
     }
 
     &__feedback {
       &-title {
-        font-size: 20px;
         margin-bottom: 20px;
       }
 
       &-text {
-        font-size: 14px;
         line-height: 1.6;
         margin-bottom: 20px;
       }
@@ -1016,14 +1001,6 @@
 
     &__author {
       gap: 8px;
-
-      &-name {
-        font-size: 16px;
-      }
-
-      &-position {
-        font-size: 13px;
-      }
     }
 
     &__photo {
@@ -1035,6 +1012,88 @@
           right: -12px;
         }
       }
+    }
+  }
+}
+
+// =============================================================================
+// Trusted - Адаптивные стили
+// =============================================================================
+@media (max-width: 1399px) {
+  .trusted {
+    padding: 35px 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .trusted {
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .trusted {
+    &__title {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .trusted {
+    &__title {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+// =============================================================================
+// Notification - Адаптивные стили
+// =============================================================================
+@media (max-width: 1399px) {
+  .notification {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .notification {
+    &__form {
+      padding: 50px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .notification {
+    &__form {
+      padding: 32px;
+    }
+
+    &__field {
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+    }
+
+    &__input {
+      width: 100%;
+      min-width: 100%;
+    }
+
+    &__btn {
+      width: 100%;
+      min-width: 100px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .notification {
+    &__form {
+      padding: 24px;
     }
   }
 }
